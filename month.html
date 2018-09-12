@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị số ngày trong tháng</title>
+</head>
+<body>
+<form action="/action_page.php">
+    <h2>Tính số ngày trong tháng</h2>
+    <input id="input" type="text"/>
+    <input name="button" type="button" value="Tính số ngày" onclick="write"/>
+    <div style="color: blue; font-size: 40px;">
+        Result:
+        <output id="output" style="width: 500px"></output>
+    </div>
+</form>
+<script>
+    function write() {
+        let input = document.getElementById("input").value;
+        input = parseInt();
+        switch (input) {
+            case (1):
+            case (3):
+            case (5):
+            case (7):
+            case (8):
+            case (10):
+            case (12):
+                output = ("Tháng" + input + "có 31 ngày");
+                break;
+            case (4):
+            case (6):
+            case (9):
+            case (11):
+                output = ("Tháng" + input + "có 30 ngày");
+                break;
+            case (2):
+                output = ("Tháng" + input + "có 28 hoặc 29 ngày");
+                break;
+        }
+        let output = document.getElementById("output").innerHTML;
+    }
+</script>
+</body>
+</html>
